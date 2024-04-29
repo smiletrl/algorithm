@@ -1,0 +1,9 @@
+test:
+	- export GOWORK=off
+	- go clean -testcache
+	- go test -race ./...
+# code check
+lintcheck:
+	- golangci-lint run ./...
+	- staticcheck ./...
+
