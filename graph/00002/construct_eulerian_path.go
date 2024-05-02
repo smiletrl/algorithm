@@ -22,6 +22,8 @@ func ValidArrangement(pairs [][]int) [][]int {
 }
 
 type adjacentVertices struct {
+	// @todo probably add capacity when initialize this queue slice so Go doesn't
+	// have to re-assign new memory when insert one new queue item
 	vertices            []int
 	currentIndex        int
 	outDegree, inDegree int
@@ -243,6 +245,8 @@ func (n *Node) attach(an *Node) {
 }
 
 type RemainingVertices struct {
+	// @todo probably add capacity when initialize this queue slice so Go doesn't
+	// have to re-assign new memory when insert one new queue item
 	vertices     []*Node
 	currentIndex int
 }
