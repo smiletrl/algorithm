@@ -11,12 +11,15 @@ func ValidArrangement(pairs [][]int) [][]int {
 		walkVertexNode:            nil,
 		floatingWalkEndVertexNode: nil,
 	}
-	for _, pair := range pairs {
+	pair := []int{}
+	for _, pair = range pairs {
 		g.addEdge(pair)
-		// optional, to get same result. different start vertex will generate different
-		// arrangment
-		g.startVertex = pair[0]
 	}
+
+	// optional, to get same output result. Different start vertex will generate different
+	// arrangment. Here we always use last edge's start vertex.
+	g.startVertex = pair[0]
+
 	g.constructCircuit()
 	return g.out()
 }
@@ -119,40 +122,40 @@ func (g *Graph) walk() {
 		return
 	}
 
-	preNode := g.walkVertexNode
-	previous_i := s
+	iterateNode := g.walkVertexNode
+	iterate_i := s
 
 	i := g.next(s)
 
 	// if edge start vertex still have unused out edges, add it to remaining vertices queue
-	if g.adj[previous_i].length() > 0 {
-		g.remainingVertices.insert(preNode)
+	if g.adj[iterate_i].length() > 0 {
+		g.remainingVertices.insert(iterateNode)
 	}
 
 	for i != s {
-		// add it to circuit
-		preNode = NewNode(i)
-		previous_i = i
+		// create a new iterate node and attach it to circuit
+		iterateNode = NewNode(i)
+		iterate_i = i
 
-		g.walkVertexNode.attach(preNode)
+		g.walkVertexNode.attach(iterateNode)
 
-		// move walk node to next node
-		g.walkVertexNode = preNode
+		// move walk node to iterate node
+		g.walkVertexNode = iterateNode
 
-		// get next vertex
+		// get next iterate vertex
 		i = g.next(i)
 
 		// if edge start vertex still have unused out edges, add it to remaining vertices queue
-		if g.adj[previous_i].length() > 0 {
-			g.remainingVertices.insert(preNode)
+		if g.adj[iterate_i].length() > 0 {
+			g.remainingVertices.insert(iterateNode)
 		}
 	}
 
 	// i == s now, i walks back to original vertex. Let's create a new node for original vertex.
-	preNode = NewNode(i)
+	iterateNode = NewNode(i)
 	// the new node will direct to floating walk end vertex node. In this way, we join current walk back to the circuit.
-	preNode.Next = g.floatingWalkEndVertexNode
-	g.walkVertexNode.attach(preNode)
+	iterateNode.Next = g.floatingWalkEndVertexNode
+	g.walkVertexNode.attach(iterateNode)
 }
 
 func (g *Graph) initWalk() {
