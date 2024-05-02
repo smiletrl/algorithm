@@ -67,6 +67,7 @@ type Graph struct {
 	// when a new walk starts, record this walk start node's next node as the end node for this round walk.
 	floatingWalkEndVertexNode *Node
 
+	// our first walk will start from this vertex
 	startVertex int
 }
 
