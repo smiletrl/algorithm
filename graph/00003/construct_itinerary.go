@@ -5,6 +5,7 @@ import (
 )
 
 // https://leetcode.com/problems/valid-arrangement-of-pairs/description/
+// Eularian trail, Eulerian circuit, dfs, queue, stack
 // hard
 
 func findItinerary(tickets [][]string) []string {
