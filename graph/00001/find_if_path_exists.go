@@ -1,6 +1,7 @@
 package graph
 
 // https://leetcode.com/problems/find-if-path-exists-in-graph/description/
+// easy
 
 func ValidPath(n int, edges [][]int, source int, destination int) bool {
 	if source == destination {
