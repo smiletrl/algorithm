@@ -2,6 +2,8 @@
 
 This holds algorithms I practiced in programming, mainly for problems at https://leetcode.com.
 
+Runtime for most of these solutions beat over 85% Go solutions at the moment submission was accepted.
+
 # Structure
 
 ```
