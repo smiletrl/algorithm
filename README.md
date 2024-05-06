@@ -24,10 +24,8 @@ This holds algorithms I practiced in programming, mainly for problems at https:/
 
 # Problem numbers
 
-```
-| Level       | Number      |
-| ----------- | ----------- |
-| Hard        | 2           |
-| Medium      | 0           |
-| Easy        | 1           |
-```
+| Level  | Number |
+| ------ | ------ |
+| hard   | 2      |
+| medium | 0      |
+| easy   | 1      |
