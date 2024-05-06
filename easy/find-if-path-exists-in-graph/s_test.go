@@ -34,7 +34,7 @@ func TestValidPath(t *testing.T) {
 	}
 	for _, ca := range cases {
 		t.Run(ca.name, func(t *testing.T) {
-			valid := ValidPath(ca.n, ca.edges, ca.source, ca.destination)
+			valid := validPath(ca.n, ca.edges, ca.source, ca.destination)
 			assert.Equal(t, ca.isValid, valid)
 		})
 	}

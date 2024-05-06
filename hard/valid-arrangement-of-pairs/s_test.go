@@ -30,7 +30,7 @@ func TestValidArrangement(t *testing.T) {
 	}
 	for _, ca := range cases {
 		t.Run(ca.name, func(t *testing.T) {
-			ar := ValidArrangement(ca.edges)
+			ar := validArrangement(ca.edges)
 			assert.Equal(t, ca.expect, ar)
 		})
 	}

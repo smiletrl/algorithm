@@ -3,7 +3,7 @@ package graph
 // https://leetcode.com/problems/valid-arrangement-of-pairs/description/
 // Eularian trail, Eulerian circuit, dfs, queue
 
-func ValidArrangement(pairs [][]int) [][]int {
+func validArrangement(pairs [][]int) [][]int {
 	g := &Graph{
 		adj:                       make(map[int]*adjacentVertices),
 		virtualPair:               nil,

@@ -3,7 +3,7 @@ package graph
 // https://leetcode.com/problems/find-if-path-exists-in-graph/description/
 // dfs
 
-func ValidPath(n int, edges [][]int, source int, destination int) bool {
+func validPath(n int, edges [][]int, source int, destination int) bool {
 	if source == destination {
 		return true
 	}
