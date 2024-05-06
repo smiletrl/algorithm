@@ -2,7 +2,6 @@ package graph
 
 // https://leetcode.com/problems/valid-arrangement-of-pairs/description/
 // Eularian trail, Eulerian circuit, dfs, queue
-// hard
 
 func ValidArrangement(pairs [][]int) [][]int {
 	g := &Graph{

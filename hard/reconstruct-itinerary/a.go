@@ -4,9 +4,8 @@ import (
 	"sort"
 )
 
-// https://leetcode.com/problems/valid-arrangement-of-pairs/description/
+// https://leetcode.com/problems/reconstruct-itinerary/
 // Eularian trail, Eulerian circuit, dfs, queue, stack
-// hard
 
 func findItinerary(tickets [][]string) []string {
 	g := &Graph{
