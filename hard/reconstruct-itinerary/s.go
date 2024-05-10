@@ -269,8 +269,7 @@ type Circuit struct {
 
 // node belongs to doubly linked list
 type Node struct {
-	Previous *Node
-	Next     *Node
+	Next *Node
 
 	// this node's value
 	val string
@@ -283,7 +282,6 @@ func NewNode(val string) *Node {
 }
 
 func (n *Node) attach(an *Node) {
-	an.Previous = n
 	n.Next = an
 }
 
