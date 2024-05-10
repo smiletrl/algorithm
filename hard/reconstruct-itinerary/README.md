@@ -6,7 +6,7 @@ Some improvement:
 
 Graph data structure is
 
-map[vertex]adjQueue
+`map[vertex]adjQueue`
 
 adjQueue will be sorted in lexical ascending order, so the vertex will small ascending order walks firstly.
 
