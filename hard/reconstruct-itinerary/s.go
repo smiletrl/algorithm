@@ -1,4 +1,4 @@
-package graph
+package solution
 
 import (
 	"sort"
