@@ -207,15 +207,6 @@ func (p *Path) checkLine(data []int, checkLen int) {
 	}
 }
 
-func (p *Path) valExists(s []int, val int) bool {
-	for _, v := range s {
-		if v == val {
-			return true
-		}
-	}
-	return false
-}
-
 func (p *Path) checkRound(le int) (res bool) {
 	p.initLastValParam(le)
 	p.initFirstLineHash(le)

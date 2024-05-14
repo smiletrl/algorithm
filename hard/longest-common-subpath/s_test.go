@@ -68,9 +68,6 @@ func TestLongestCommonSubpath(t *testing.T) {
 		},
 	}
 	for _, ca := range cases {
-		if ca.name != "case -1" {
-			// continue
-		}
 		t.Run(ca.name, func(t *testing.T) {
 			sub := longestCommonSubpath(ca.n, ca.paths)
 			assert.Equal(t, ca.expectedLen, sub)
