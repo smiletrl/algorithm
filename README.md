@@ -26,6 +26,6 @@ This holds algorithms I practiced in programming, mainly for problems at https:/
 
 | Level  | Number |
 | ------ | ------ |
-| hard   | 2      |
+| hard   | 3      |
 | medium | 0      |
 | easy   | 1      |
