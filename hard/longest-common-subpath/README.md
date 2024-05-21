@@ -23,7 +23,7 @@ $$
 We want to add mod calculation to decrease number size
 
 $$
-H_{n} = (a_{1}b^{n-1} + a_{2}b^{n-2} + ... + a_{n-1}b + a_{n}) \% m
+H_{n} = (a_{1}b^{n-1} + a_{2}b^{n-2} + ... + a_{n-1}b + a_{n}) \bmod m
 $$
 
 I'm going to do some simple conversions to get the rolling hash function.
@@ -39,19 +39,19 @@ $$
 We get
 
 $$
-H = (a+b) \% m
+H = (a+b) \bmod m
 $$
 
 $$
-H = (i_{a}m + j_{a} + b) \%m
+H = (i_{a}m + j_{a} + b) \bmod m
 $$
 
 $$
-H = (j_{a} + b) \%m
+H = (j_{a} + b) \bmod m
 $$
 
 $$
-H = (a \% m + b) \%m
+H = (a \bmod m + b) \bmod m
 $$
 
 ## Conversion 2
@@ -65,23 +65,23 @@ $$
 We get
 
 $$
-H = (ab) \% m
+H = (ab) \bmod m
 $$
 
 $$
-H = (i_{a}m + j_{a})b \%m
+H = (i_{a}m + j_{a})b \bmod m
 $$
 
 $$
-H = (i_{a}mb + j_{a}b) \%m
+H = (i_{a}mb + j_{a}b) \bmod m
 $$
 
 $$
-H = (j_{a}b) \%m
+H = (j_{a}b) \bmod m
 $$
 
 $$
-H = ((a \%m) b) \%m
+H = ((a \bmod m) b) \bmod m
 $$
 
 ## Conversion 3
@@ -101,45 +101,45 @@ z = a_{n+1}
 $$
 
 $$
-H_{n} = (x + y) \% m
+H_{n} = (x + y) \bmod m
 $$
 
 $$
-H_{n} = (x \% m + y \% m) \% m
+H_{n} = (x \bmod m + y \bmod m) \bmod m
 $$
 
 $$
-(H_{n} + m) \% m = (x \% m + y \% m) \% m
+(H_{n} + m) \bmod m = (x \bmod m + y \bmod m) \bmod m
 $$
 
 $$
-(H_{n} + m - x \% m) \% m = (y \% m) \% m
+(H_{n} + m - x \bmod m) \bmod m = (y \bmod m) \bmod m
 $$
 
 $$
-(H_{n} + m - x \% m) \% m = y \% m
+(H_{n} + m - x \bmod m) \bmod m = y \bmod m
 $$
 
 ### Part two
 
 $$
-H_{n+1} = (yb + z) \% m
+H_{n+1} = (yb + z) \bmod m
 $$
 
 $$
-H_{n+1} = (yb \% m + z \% m) \% m
+H_{n+1} = (yb \bmod m + z \bmod m) \bmod m
 $$
 
 $$
-H_{n+1} = (((y \% m) b) \% m + z \% m) \% m
+H_{n+1} = (((y \bmod m) b) \bmod m + z \bmod m) \bmod m
 $$
 
 $$
-H_{n+1} = ((((H_{n} + m - x \% m) \% m) b) \% m + z \% m) \% m
+H_{n+1} = ((((H_{n} + m - x \bmod m) \bmod m) b) \bmod m + z \bmod m) \bmod m
 $$
 
 $$
-H_{n+1} = (((H_{n} + m - x \% m) \% m) b + z) \% m
+H_{n+1} = (((H_{n} + m - x \bmod m) \bmod m) b + z) \bmod m
 $$
 
 This is what function `func (p *Path) rollingHash()` is doing.
