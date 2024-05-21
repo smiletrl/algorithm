@@ -8,7 +8,7 @@ Graph data structure is
 
 `map[vertex]adjQueue`
 
-adjQueue will be sorted in lexical ascending order, so the vertex will small ascending order walks firstly.
+adjQueue will be sorted in lexical ascending order, so the vertex with small ascending order walks firstly.
 
 The unused edges, i.e, the remaining out vertices from every walk is saved as a stack list.
 

@@ -29,3 +29,7 @@ This holds algorithms I practiced in programming, mainly for problems at https:/
 | hard   | 4      |
 | medium | 0      |
 | easy   | 1      |
+
+# Notes
+
+- [Rolling Hash](hard/longest-common-subpath/README.md)
