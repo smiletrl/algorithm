@@ -30,6 +30,6 @@ This holds algorithms I practiced in programming, mainly for problems at https:/
 | medium | 0      |
 | easy   | 1      |
 
-# Notes
+# References
 
-- [Rolling Hash](hard/longest-common-subpath/README.md)
+[Algorithms References](algorithm.md)
