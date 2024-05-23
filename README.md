@@ -22,7 +22,7 @@ This holds algorithms I practiced in programming, mainly for problems at https:/
         -- README.md
 ```
 
-# Problem numbers
+# Solved problems
 
 | Level  | Number |
 | ------ | ------ |
