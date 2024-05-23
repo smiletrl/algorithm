@@ -32,4 +32,4 @@ This holds algorithms I practiced in programming, mainly for problems at https:/
 
 # References
 
-[Algorithms References](algorithm.md)
+[Algorithms References](ALGORITHM.md)
