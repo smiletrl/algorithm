@@ -1,7 +1,7 @@
 on: [push]
 name: Test
 jobs:
-  test:
+  test_go:
     runs-on: ubuntu-latest
     steps:
       - name: Install Go
@@ -20,3 +20,15 @@ jobs:
           version: 2023.1.7
       - name: Test
         run: go test -race ./...
+  test_python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Test with pytest
+        run: |
+          pip install pytest pytest-cov
+          cd python && pytest . --doctest-modules --junitxml=python/junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
