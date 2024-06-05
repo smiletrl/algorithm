@@ -12,3 +12,8 @@
 <b>Regular Expression, Nondeterministic Finite Automaton (NFA)</b>
 
 - [regular-expression-matching](hard/regular-expression-matching)
+
+<b>Linked List</b>
+
+- [reverse-nodes-in-k-group](hard/reverse-nodes-in-k-group)
+- [merge-k-sorted-lists](hard/merge-k-sorted-lists)
