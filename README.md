@@ -1,6 +1,6 @@
 # Algorithm
 
-This holds algorithms I practiced in programming, mainly for problems at https://leetcode.com. All problems are solved in Go, but sometime I'm curious about other languages performance, so there might be additional Python/Rust solution as well as Go solution for particular problems.
+This holds algorithms I practiced in programming, mainly for problems at https://leetcode.com. All problems are solved in Go, but sometimes I'm curious about other languages performance, so there might be additional Python/Rust solution as well as Go solution for particular problems.
 
 # Structure
 
