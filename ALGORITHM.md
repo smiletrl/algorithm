@@ -12,6 +12,7 @@
 <b>Regular Expression, Nondeterministic Finite Automaton (NFA)</b>
 
 - [regular-expression-matching](hard/regular-expression-matching)
+- [wildcard-matching](hard/wildcard-matching)
 
 <b>Linked List</b>
 

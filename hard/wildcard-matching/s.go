@@ -21,10 +21,13 @@ func isMatch(s string, p string) bool {
 		match := []int{}
 		for key := range nfa.g.marked {
 			if key < len(pArr) {
-				if sArr[i] == pArr[key] || pArr[key] == "." {
+				if sArr[i] == pArr[key] || pArr[key] == "?" || pArr[key] == "*" {
 					// we will compare against next char of pattern string for next char of search string
 					// if key == len(pArr) - 1, then key+1 is the complete NFA state
 					match = append(match, key+1)
+					if pArr[key] == "*" {
+						match = append(match, key)
+					}
 				}
 			}
 		}
@@ -67,8 +70,6 @@ func (n *NFA) init(pArr []string) {
 	}
 	for i, ps := range pArr {
 		if ps == "*" {
-			n.g.addEdge(i, i-1)
-			n.g.addEdge(i-1, i)
 			n.g.addEdge(i, i+1)
 		}
 	}
