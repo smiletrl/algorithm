@@ -15,20 +15,26 @@ func TestNumberOfChild(t *testing.T) {
 	}{
 		{
 			name:   "case 1",
-			n:      4,
+			n:      3,
 			k:      5,
-			expect: 56,
+			expect: 1,
 		},
 		{
 			name:   "case 2",
 			n:      5,
-			k:      3,
-			expect: 35,
+			k:      6,
+			expect: 2,
+		},
+		{
+			name:   "case 3",
+			n:      4,
+			k:      2,
+			expect: 2,
 		},
 	}
 	for _, ca := range cases {
 		t.Run(ca.name, func(t *testing.T) {
-			r := valueAfterKSeconds(ca.n, ca.k)
+			r := numberOfChild(ca.n, ca.k)
 			assert.Equal(t, ca.expect, r)
 		})
 	}
