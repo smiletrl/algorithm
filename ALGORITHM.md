@@ -18,3 +18,8 @@
 
 - [reverse-nodes-in-k-group](hard/reverse-nodes-in-k-group)
 - [merge-k-sorted-lists](hard/merge-k-sorted-lists)
+
+<b>Bitwise operation</b>
+
+- [maximum-total-reward-using-operations-ii](hard/maximum-total-reward-using-operations-ii)
+- [maximum-total-reward-using-operations-i](medium/maximum-total-reward-using-operations-i)
