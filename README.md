@@ -29,8 +29,8 @@ All problems are solved in Go, but sometimes I'm curious about other languages p
 | Level  | Number |
 | ------ | ------ |
 | hard   | 9      |
-| medium | 2      |
-| easy   | 2      |
+| medium | 4      |
+| easy   | 3      |
 
 # References
 

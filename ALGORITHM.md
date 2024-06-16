@@ -23,3 +23,8 @@
 
 - [maximum-total-reward-using-operations-ii](hard/maximum-total-reward-using-operations-ii)
 - [maximum-total-reward-using-operations-i](medium/maximum-total-reward-using-operations-i)
+
+<b>Dynamic Programming</b>
+
+- [maximum-total-damage-with-spell-casting](medium/maximum-total-damage-with-spell-casting)
+- [maximum-total-reward-using-operations-ii](hard/maximum-total-reward-using-operations-ii)
