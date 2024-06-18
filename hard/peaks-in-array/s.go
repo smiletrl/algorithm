@@ -60,6 +60,7 @@ func countOfPeaks(nums []int, queries [][]int) []int {
 	return res
 }
 
+// binary tree
 type bit struct {
 	tree []int
 	le   int
