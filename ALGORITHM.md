@@ -28,6 +28,7 @@
 
 - [maximum-total-damage-with-spell-casting](medium/maximum-total-damage-with-spell-casting)
 - [maximum-total-reward-using-operations-ii](hard/maximum-total-reward-using-operations-ii)
+- [maximize-total-cost-of-alternating-subarrays](medium/maximize-total-cost-of-alternating-subarrays)
 
 <b>Binary index tree</b>
 
